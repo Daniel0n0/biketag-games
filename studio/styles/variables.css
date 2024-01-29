@@ -1,0 +1,31 @@
+@font-face {
+  font-family: BikeTag;
+  src:
+    url("/static/fonts/BikeTag-Bold.ttf");
+}
+
+:root {
+  /* Brand colors */
+  --brand-primary: #000000;
+  --brand-primary--inverted: #ffffff;
+  --brand-secondary: #C4C4C4;
+  --brand-secondary--inverted: #F0F0F0;
+  /* Typography */
+  --font-family-sans-serif: BikeTag;
+  --font-family-serif: BikeTag;
+  --font-family-base: BikeTag;
+  --font-size-base: 2em;
+  --text-color: var(--brand-secondary--inverted);
+  /* Main Navigation */
+  --main-navigation-color: var(--brand-secondary);
+  --main-navigation-color--inverted: var(--brand-secondary--inverted);
+}
+
+Body {
+  font-family: var(--font-family-base) !important;
+}
+
+input, span, svg {
+  font-size: 2rem !important;
+  line-height: 2rem !important;
+}

@@ -3,23 +3,28 @@
   "name": "biketag",
   "version": "1.0.0",
   "scripts": {
+    "codegen": "cd studio && npm run generate",
     "build-all": "npm run build && npm run build-studio",
     "build": "lerna run build --parallel",
     "build-studio": "(cd studio && npm run build)",
     "dev": "lerna run dev --parallel",
     "format": "lerna run format",
     "lint": "lerna run lint",
-    "postinstall": "lerna bootstrap",
     "test": "echo \"Error: no test specified\" && exit 1",
     "login": "cd studio && npm run login",
     "deploy": "cd studio && npm run deploy",
     "upgrade": "cd studio && npm run upgrade"
   },
   "devDependencies": {
-    "@sanity/cli": "^0.144.0",
-    "lerna": "^3.14.0"
+    "@sanity/cli": "^3.26.0",
+    "lerna": "^8.0.2",
+    "prettier": "^2.0.0",
+    "sanity-codegen": "^0.9.8"
   },
   "dependencies": {
-    "@sanity/server": "^2.6.1"
-  }
+    "@sanity/server": "^3.1.4"
+  },
+  "workspaces": [
+    "studio"
+  ]
 }

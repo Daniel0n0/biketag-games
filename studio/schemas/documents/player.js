@@ -20,11 +20,8 @@ export default {
     },
     {
       title: "Bicon",
-      name: "avatar",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      name: "bicon",
+      type: "string",
     },
     {
       type: "array",
@@ -37,6 +34,28 @@ export default {
         {
           type: "reference",
           to: [{ type: "tag" }],
+        },
+      ],
+    },
+    {
+      type: "array",
+      name: "games",
+      weak: true,
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "game" }],
+        },
+      ],
+    },
+    {
+      type: "array",
+      name: "achievements",
+      weak: true,
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "achievement" }],
         },
       ],
     },

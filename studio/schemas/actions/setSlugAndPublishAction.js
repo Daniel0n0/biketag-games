@@ -64,8 +64,12 @@ export default function SetSlugAndPublishAction(props) {
             /// Don't let the slug be lowercased, or modified in any way from the original name field value
             break;
 
+          case "achievement":
+            slug = props.draft.key
+            break;
+
           default:
-            slug = slug.toLowerCase();
+            slug = slug.toLowerCase().replace(/\s/gi,'');
             break;
         }
 
